@@ -1,5 +1,8 @@
 # 2course
 
+## Ссылка на gh-pages
+https://nsotnikov16.github.io/2course/
+
 ## Project setup
 ```
 npm install
