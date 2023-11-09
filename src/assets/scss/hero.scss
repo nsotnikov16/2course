@@ -1,0 +1,36 @@
+.hero {
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    max-width: 63%;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 42.5%;
+    margin-top: 28px;
+  }
+
+  &__list {
+    max-width: 45%;
+    margin: 22% 0 0 auto;
+
+    li {
+      font-size: 18px;
+      line-height: 150%;
+      list-style-image: url(../images/marker.svg);
+      padding-left: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}

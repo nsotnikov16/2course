@@ -1,0 +1,27 @@
+/* Шапка */
+.header {
+  margin: 35px 0 15px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__contacts {
+    font-weight: 500;
+    font-size: 18px;
+    color: #0c2836;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 39px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+}

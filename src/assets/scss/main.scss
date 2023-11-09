@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap");
+@import "normalize";
+
+$base-color: #0c2836;
+$orange-color: #ffa239;
+
+body {
+  font-family: "Montserrat";
+  color: $base-color;
+}
+
+a {
+  color: $base-color;
+  text-decoration: none;
+}
+
+.orange {
+  color: $orange-color;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 50px 0;
+
+  &__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    margin-bottom: 40px;
+  }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.scale {
+  display: block;
+  transform: scale(1);
+  transition: transform 0.25s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@import "header";
+@import "hero";
+@import "projects";
+@import "technologies";
+@import "footer";
