@@ -1,3 +1,4 @@
+import { getSearchParams } from '@/utils/functions';
 import { createStore } from 'vuex'
 
 export default createStore({
@@ -42,8 +43,25 @@ export default createStore({
     ]
   },
   actions: {
-    async sendToTelegram({ commit }, data) {
+    async sendToTelegram({ commit }, data = {}) {
+      const getParams = getSearchParams();
+      data.chat_id = getParams.get('chat_id') ?? process.env.VUE_APP_CHAT_ID;
 
+      const url = `https://api.telegram.org/bot${getParams.get('token') ?? process.env.VUE_APP_TOKEN_BOT}/sendMessage?`;
+      const params = Object.entries(data).map(([k, v]) => `${k}=${v}`).join('&');
+
+      try {
+        const response = await fetch(url + params);
+        const res = await response.json();
+
+        if (!res || !res.ok || !res.result.message_id) {
+          throw new Error(res.description ?? 'Произошла ошибка отправки сообщения');
+        }
+
+        return { success: true };
+      } catch (error) {
+        return { error: error.message };
+      }
     }
   },
 })
