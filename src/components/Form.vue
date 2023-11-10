@@ -87,6 +87,7 @@ export default {
           throw new Error(result.error ?? "Ошибка отправки сообщения");
 
         alert("Отправлено успешно!");
+        Object.entries(this.fields).forEach(([k, v]) => this.fields[k] = '');
       } catch (error) {
         alert(error.message);
       } finally {
