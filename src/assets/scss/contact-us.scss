@@ -1,0 +1,32 @@
+.contact-us {
+    &__container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    &__left {
+        margin-right: 5%;
+        text-align: right;
+    }
+
+    &__right {
+        width: 49%;
+    }
+
+    &__form {
+        .form__fields {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+
+            [name="question"] {
+                grid-column: 1/4;
+            }
+        }
+    }
+
+    .section__title {
+        margin-bottom: 0;
+    }
+}

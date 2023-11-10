@@ -36,6 +36,11 @@ a {
     line-height: 49px;
     margin-bottom: 40px;
   }
+
+  &__subtitle {
+    font-size: 24px;
+    line-height: 150%;
+  }
 }
 
 .title {
@@ -58,4 +63,6 @@ a {
 @import "hero";
 @import "projects";
 @import "technologies";
+@import "contact-us";
+@import "form";
 @import "footer";
