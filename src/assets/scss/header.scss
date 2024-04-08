@@ -1,6 +1,7 @@
 /* Шапка */
 .header {
   margin: 35px 0 15px;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -16,12 +17,59 @@
 
     a {
       margin-right: 39px;
+
       &:last-child {
         margin-right: 0;
       }
+
       &:hover {
         color: $orange-color;
       }
     }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .header__phone, .header__email {
+    font-size: 0;
+    border: 1px solid #219CBA;
+    border-radius: 7px;
+    width: 45px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__contacts .header__phone {
+    margin-right: 11px;
+    background: #219CBA;
+  }
+
+  .header__contacts svg {
+    display: initial;
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__phone {
+     svg {
+       fill: white;
+     }
+  }
+
+  .header__email {
+    svg {
+      fill: #219CBA
+    }
+  }
+
+  .header .logo {
+    width: 60px;
+    height: 65px;
   }
 }

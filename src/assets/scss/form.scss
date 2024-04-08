@@ -40,3 +40,15 @@
     min-width: 210px;
   }
 }
+
+
+@media(max-width: 767px) {
+    .form {
+      padding: 15px;
+
+      &__btn {
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+}

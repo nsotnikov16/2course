@@ -1,14 +1,26 @@
 <script setup>
-import { formatePhone } from "@/utils/functions";
+import {formatePhone} from "@/utils/functions";
 </script>
 
 <template>
   <header class="header">
     <div class="header__container container">
-      <Logo />
+      <Logo/>
       <div class="header__contacts">
-        <a class="underline scale" :href="`tel:${formatePhone(info.phone)}`">{{ info.phone }}</a>
-        <a class="scale" :href="`mailto:${info.email}`">{{ info.email }}</a>
+        <a class="underline scale header__phone" :href="`tel:${formatePhone(info.phone)}`">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M19.23 15.26L16.69 14.97C16.3914 14.9349 16.0886 14.968 15.8046 15.0667C15.5206 15.1654 15.2626 15.3273 15.05 15.54L13.21 17.38C10.3712 15.9362 8.06382 13.6288 6.62004 10.79L8.47004 8.94001C8.90004 8.51001 9.11004 7.91001 9.04004 7.30001L8.75004 4.78001C8.69335 4.29219 8.45923 3.84225 8.09228 3.51586C7.72532 3.18947 7.25115 3.00943 6.76004 3.01001H5.03004C3.90004 3.01001 2.96004 3.95001 3.03004 5.08001C3.56004 13.62 10.39 20.44 18.92 20.97C20.05 21.04 20.99 20.1 20.99 18.97V17.24C21 16.23 20.24 15.38 19.23 15.26Z"/>
+          </svg>
+          {{ info.phone }}
+        </a>
+        <a class="scale header__email" :href="`mailto:${info.email}`">
+          <svg width="20" height="16" viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z"/>
+          </svg>
+
+          {{ info.email }}</a>
       </div>
     </div>
   </header>
@@ -16,11 +28,11 @@ import { formatePhone } from "@/utils/functions";
 
 <script>
 import Logo from "./Logo.vue";
-import { mapState } from "vuex";
+import {mapState} from "vuex";
 
 export default {
-  computed: mapState({ info: (s) => s.info }),
-  components: { Logo },
+  computed: mapState({info: (s) => s.info}),
+  components: {Logo},
 };
 </script>
 

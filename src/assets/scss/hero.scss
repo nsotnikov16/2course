@@ -34,3 +34,30 @@
     width: 100%;
   }
 }
+
+
+@media(max-width: 767px) {
+  .hero {
+
+    &__title {
+      max-width: 350px;
+    }
+    &__subtitle {
+      max-width: initial;
+    }
+    &__img {
+      position: static;
+      margin-top: 20px;
+    }
+
+    &__list {
+      margin:  20px 0 0 0;
+      padding-left: 35px;
+      max-width: 100%;
+
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}

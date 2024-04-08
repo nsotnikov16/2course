@@ -31,3 +31,10 @@
     line-height: 150%;
   }
 }
+
+
+@media(max-width: 767px) {
+  .projects__list {
+    grid-template-columns: 1fr;
+  }
+}
